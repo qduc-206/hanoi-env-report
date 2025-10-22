@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analysis of Environmental Issues in Hanoi Old Quarter</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
-        html {
-            scroll-behavior: smooth;
-        }
+        /* === ĐÃ XÓA scroll-behavior: smooth; TỪ ĐÂY === */
 
         body {
             font-family: 'Inter', sans-serif;
@@ -20,6 +21,7 @@
             padding: 0;
             width: 100%;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         .container-section {
             padding: 2.5rem 1rem;
@@ -45,6 +47,9 @@
             background-color: #059669;
             border-radius: 50%;
         }
+        header {
+            background: linear-gradient(135deg, #14b8a6 0%, #065f46 100%);
+        }
         .time-box {
             background-color: #ffffff;
             border-left: 4px solid #34d399;
@@ -69,11 +74,28 @@
              object-fit: cover;
              border-radius: 0.375rem;
         }
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+        #table-of-contents a {
+            transition: all 0.2s ease;
+            cursor: pointer; /* Thêm con trỏ chuột */
+        }
+        #table-of-contents a:hover {
+            background-color: #e6f7f5;
+            padding-left: 12px;
+            border-left: 4px solid #14b8a6;
+        }
     </style>
 </head>
 <body>
 
-    <header class="bg-teal-600 text-white shadow-lg p-6">
+    <header class="bg-teal-600 text-white shadow-lg p-6" data-aos="fade-in">
         <div class="max-w-7xl mx-auto flex flex-col items-center">
             <h1 class="text-3xl sm:text-4xl font-extrabold mb-1">
                 Analysis of the Evolution of Environmental Issues
@@ -86,57 +108,58 @@
 
     <main class="container-section">
 
-        <section id="table-of-contents" class="mb-10 p-5 bg-gray-50 rounded-lg shadow-md border-l-4 border-teal-500">
+        <section id="table-of-contents" class="mb-10 p-5 bg-gray-50 rounded-lg shadow-md border-l-4 border-teal-500" data-aos="fade-up">
             <h3 class="text-xl font-bold mb-4 text-teal-700">Mục lục (Page Contents)</h3>
             <ul class="list-none space-y-2 pl-2">
-                <li><a href="#introduction" class="text-base text-blue-700 hover:text-blue-900 hover:underline">1. Introduction</a></li>
-                <li><a href="#methodology" class="text-base text-blue-700 hover:text-blue-900 hover:underline">2. Methodology</a></li>
-                <li><a href="#literature-review" class="text-base text-blue-700 hover:text-blue-900 hover:underline">3. Literature Review</a></li>
-                <li><a href="#discussion" class="text-base text-blue-700 hover:text-blue-900 hover:underline">4. Findings</a></li>
-                <li><a href="#conclusion" class="text-base text-blue-700 hover:text-blue-900 hover:underline">5. Conclusion & Recommendations</a></li>
-                <li><a href="#references" class="text-base text-blue-700 hover:text-blue-900 hover:underline">References</a></li>
+                
+                <li><a href="#" onclick="document.getElementById('introduction').scrollIntoView({ behavior: 'smooth' }); return false;" class="block py-1 text-base text-blue-700 hover:text-blue-900">1. Introduction</a></li>
+                <li><a href="#" onclick="document.getElementById('methodology').scrollIntoView({ behavior: 'smooth' }); return false;" class="block py-1 text-base text-blue-700 hover:text-blue-900">2. Methodology</a></li>
+                <li><a href="#" onclick="document.getElementById('literature-review').scrollIntoView({ behavior: 'smooth' }); return false;" class="block py-1 text-base text-blue-700 hover:text-blue-900">3. Literature Review</a></li>
+                <li><a href="#" onclick="document.getElementById('discussion').scrollIntoView({ behavior: 'smooth' }); return false;" class="block py-1 text-base text-blue-700 hover:text-blue-900">4. Findings</a></li>
+                <li><a href="#" onclick="document.getElementById('conclusion').scrollIntoView({ behavior: 'smooth' }); return false;" class="block py-1 text-base text-blue-700 hover:text-blue-900">5. Conclusion & Recommendations</a></li>
+                <li><a href="#" onclick="document.getElementById('references').scrollIntoView({ behavior: 'smooth' }); return false;" class="block py-1 text-base text-blue-700 hover:text-blue-900">References</a></li>
+            
             </ul>
         </section>
-
-        <section id="introduction" class="mb-10">
+        <section id="introduction" class="mb-10" data-aos="fade-up">
             <h3 class="section-title">1. Introduction</h3>
             <div class="text-base leading-relaxed p-4 bg-white rounded-lg shadow-md border-t-4 border-teal-500">
                 <p>The Hanoi Old Quarter (HOQ) is a unique urban heritage site, preserving distinctive historical and cultural values. However, the HOQ faces immense pressure from urban development, leading to a serious degradation of living environment quality and landscape. These issues range from solid waste pollution, declining urban aesthetics, to air pollution and overloaded technical infrastructure. The purpose of this essay is to analyze the evolution and core environmental themes in the HOQ from 2007 to 2025 by synthesizing and evaluating six relevant research papers and news reports, thereby offering a personal assessment and proposing solutions.</p>
             </div>
         </section>
 
-        <section id="methodology" class="mb-10">
+        <section id="methodology" class="mb-10" data-aos="fade-up">
             <h3 class="section-title">2. Methodology</h3>
-            <div class="text-base leading-relaxed p-4 bg-white rounded-lg shadow-md">
+            <div class="text-base leading-relaxed p-4 bg-white rounded-lg shadow-md card-hover">
                 <p>This essay employs a <strong>Systematic Literature Review</strong> method based on six sources of information collected and arranged chronologically: 2007, 2019, 2020, 2023, 2024, and 2025. These sources include international academic studies (<a href="https://www.mdpi.com/2071-1050/11/6/1768" target="_blank" class="text-blue-600 hover:underline">MDPI, 2019</a>, <a href="https://longvietarch.wordpress.com/2023/12/13/pho-co-ha-noi-truoc-thach-thuc-bao-ton/" target="_blank" class="text-blue-600 hover:underline">ResearchGate / Longvietarch, 2025</a>), specialized reports (<a href="http://bmktcn.com/index.php?option=com_content&task=view&id=418&Itemid=241" target="_blank" class="text-blue-600 hover:underline">BMKTCN, 2007</a>), and news articles reflecting urgent environmental realities (<a href="https://kinhtedothi.vn/quan-hoan-kiem-chung-tay-vi-mot-ha-noi-xanh.html" target="_blank" class="text-blue-600 hover:underline">Kinh Tế Đô Thị, 2023</a>, <a href="https://moitruong.net.vn/sau-dem-trung-thu-pho-co-ha-noi-ngap-trong-rac-thai-11896.html" target="_blank" class="text-blue-600 hover:underline">Môi trường & Cuộc sống, 2020</a>, <a href="https://vovgiaothong.vn/newsaudio/ha-noi-dan-pho-co-loay-hoay-phan-loai-rac-d41658.html" target="_blank" class="text-blue-600 hover:underline">VOV Giao thông & Dân Việt, 2024</a>). The data is compiled and categorized by key themes: Landscape/Urbanization, Waste Management, and Air Pollution/Policy.</p>
             </div>
         </section>
 
-        <section id="literature-review" class="mb-10">
+        <section id="literature-review" class="mb-10" data-aos="fade-up">
             <h3 class="section-title">3. Literature Review</h3>
             <p class="mb-4 text-gray-600 italic">The reviewed literature provides a comprehensive view of the shifting focus on environmental issues in the HOQ over time.</p>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="time-box bg-green-50">
+                <div class="time-box bg-green-50 card-hover" data-aos="fade-up" data-aos-delay="0">
                     <h4 class="font-bold text-lg mb-2 text-green-700">3.1. Landscape and Urbanization Focus (2007–2019)</h4>
                     <p class="text-sm">The early focus was on the <strong>declining attractiveness of the urban landscape</strong> due to development pressure and population growth. The issue later expanded to broader environmental impacts like the <strong>Urban Heat Island (UHI) effect</strong> (<a href="https://www.mdpi.com/2071-1050/11/6/1768" target="_blank" class="text-blue-600 hover:underline">MDPI, 2019</a>).</p>
                     <a href="http://bmktcn.com/index.php?option=com_content&task=view&id=418&Itemid=241" target="_blank" class="text-xs text-teal-600 hover:text-teal-800 mt-2 block font-medium">Source: BMKTCN, 2007</a>
                 </div>
-                <div class="time-box bg-yellow-50">
+                <div class="time-box bg-yellow-50 card-hover" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-bold text-lg mb-2 text-yellow-700">3.2. Waste Crisis and Air Pollution (2020–2023)</h4>
                     <p class="text-sm">This phase reflected urgent public health concerns: <strong>overloaded solid waste</strong> management after major festivals (<a href="https://moitruong.net.vn/sau-dem-trung-thu-pho-co-ha-noi-ngap-trong-rac-thai-11896.html" target="_blank" class="text-blue-600 hover:underline">Môi trường & Cuộc sống, 2020</a>) and severe air pollution, with the HOQ area recording the <strong>highest PM2.5 concentrations</strong> in Hoan Kiem District (<a href="https://kinhtedothi.vn/quan-hoan-kiem-chung-tay-vi-mot-ha-noi-xanh.html" target="_blank" class="text-blue-600 hover:underline">Kinh Tế Đô Thị, 2023</a>).</p>
                 </div>
-                <div class="time-box bg-red-50">
+                <div class="time-box bg-red-50 card-hover" data-aos="fade-up" data-aos-delay="200">
                     <h4 class="font-bold text-lg mb-2 text-red-700">3.3. Policy Challenges and Infrastructure Overload (2024–2025)</h4>
                     <p class="text-sm">Pilot programs for <strong>source-based waste classification</strong> faced <strong>difficulties</strong> due to cramped living spaces (<a href="https://vovgiaothong.vn/newsaudio/ha-noi-dan-pho-co-loay-hoay-phan-loai-rac-d41658.html" target="_blank" class="text-blue-600 hover:underline">VOV Giao thông & Dân Việt, 2024</a>). The core issue was confirmed as <strong>excessively high population density (823 people/ha)</strong> leading to severe infrastructure overload and degraded housing conditions (<a href="https://longvietarch.wordpress.com/2023/12/13/pho-co-ha-noi-truoc-thach-thuc-bao-ton/" target="_blank" class="text-blue-600 hover:underline">Longvietarch, 2025</a>).</p>
                 </div>
             </div>
         </section>
 
-        <section id="discussion" class="mb-10">
+        <section id="discussion" class="mb-10" data-aos="fade-up">
             <h3 class="section-title">4.Findings</h3>
 
             <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700">4.1. Evolution of Environmental Issues</h4>
-            <div class="overflow-x-auto bg-white rounded-lg shadow-md mb-6">
+            <div class="overflow-x-auto bg-white rounded-lg shadow-md mb-6 card-hover">
                 <table class="w-full custom-table text-sm">
                     <thead>
                         <tr>
@@ -157,7 +180,7 @@
             </div>
 
             <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700">4.2. Tourist Feedback</h4>
-            <div class="p-5 bg-blue-50 border-l-4 border-blue-600 rounded-lg shadow-inner text-base leading-relaxed">
+            <div class="p-5 bg-blue-50 border-l-4 border-blue-600 rounded-lg shadow-inner text-base leading-relaxed card-hover">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center mb-4 border-b pb-4">
                     <p class="mt-0 md:col-span-2">Severe air pollution from motorbikes and traffic congestion.</p>
                     <div class="md:col-span-1 w-full h-24 overflow-hidden rounded-md shadow-md">
@@ -192,11 +215,11 @@
         </section>
 
         <section id="conclusion" class="mb-10">
-            <h3 class="section-title">5. Conclusion,Recommendations And Discussion</h3>
+            <h3 class="section-title" data-aos="fade-up">5. Conclusion,Recommendations And Discussion</h3>
             
-            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2">5.1. Discussion</h4>
+            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2" data-aos="fade-up">5.1. Discussion</h4>
             
-            <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-4 rounded-lg shadow-md mb-6">
+            <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-4 rounded-lg shadow-md mb-6 card-hover" data-aos="fade-up">
                 <div class="w-full md:w-2/5">
                     <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3efd9e6b3c6f48f6ffcf9e7d3e9837338b40419a6c91783b8bf6205bbd6c1655faf63a899dc0d598a8828a44264337440e8/2-953.jpg" 
                          alt="Hanoi Old Quarter preservation" 
@@ -210,9 +233,9 @@
             </div>
 
 
-            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2">5.2. Conclusion</h4>
+            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2" data-aos="fade-up">5.2. Conclusion</h4>
             
-            <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-4 rounded-lg shadow-md mb-6">
+            <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-4 rounded-lg shadow-md mb-6 card-hover" data-aos="fade-up">
                 <div class="w-full md:w-2/5">
                     <img src="https://cdn-media.hanoitimes.vn/2020/11/3/Hanoi%20Old%20Quarter%20Ho%20Ha.jpg" 
                          alt="Overburdened infrastructure in Hanoi Old Quarter" 
@@ -225,32 +248,28 @@
                 </div>
             </div>
 
-            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2">5.3. Recommendations</h4>
+            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2" data-aos="fade-up">5.3. Recommendations</h4>
             
-            <div class="flex flex-col md:flex-row gap-6 items-start mb-6">
-                
+            <div class="flex flex-col md:flex-row gap-6 items-start mb-6" data-aos="fade-up">
                 <div class="w-full md:w-3/5">
-                    <ul class="list-disc list-inside space-y-3 pl-4 bg-green-50 p-4 rounded-lg shadow-md h-full">
+                    <ul class="list-disc list-inside space-y-3 pl-4 bg-green-50 p-4 rounded-lg shadow-md h-full card-hover">
                         <li><strong>Prioritized Population Relocation (Addressing the Root Cause):</strong> Population reduction must be treated as the most urgent environmental solution. Implement attractive financial support policies and build high-quality resettlement areas to reduce density to the planned level (500 people/ha).</li>
                         <li><strong>Environmental Solutions Adapted to Cramped Spaces:</strong> For areas where relocation is not feasible, develop smart, high-frequency waste collection and classification models tailored to the cramped tube-house architecture.</li>
                         <li><strong>Promote Low Emission Zones (LEZ) with Green Public Transport:</strong> Formally adopt the LEZ (as proposed in 2024) while concurrently strengthening the system of electric/green buses and public bicycles to provide viable alternatives to polluting private vehicles.</li>
                     </ul>
                 </div>
-
                 <div class="w-full md:w-2/5 flex flex-col gap-4">
                     <img src="https://i.ex-cdn.com/nhadautu.vn/files/content/2022/04/07/phocon-getty-0615.jpg" 
                          alt="Cramped spaces in Hanoi Old Quarter" 
-                         class="w-full h-auto rounded-lg shadow-md object-cover" style="height: 150px;">
-                    
-                    <img src="https://fgbike.vn/wp-content/uploads/2024/05/Screenshot-2024-05-30-172818.png" 
+                         class="w-full h-auto rounded-lg shadow-md object-cover card-hover" style="height: 150px;">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/730/471534926943723520/2023/12/26/xe-dap-cong-cong-ha-noi-1-170357731969639731587.jpg" 
                          alt="Public bicycles in Hanoi" 
-                         class="w-full h-auto rounded-lg shadow-md object-cover" style="height: 150px;">
+                         class="w-full h-auto rounded-lg shadow-md object-cover card-hover" style="height: 150px;">
                 </div>
             </div>
-            
         </section>
 
-        <section id="references" class="mb-10">
+        <section id="references" class="mb-10" data-aos="fade-up">
             <h3 class="section-title text-xl border-b pb-2">REFERENCES</h3>
             <ol class="list-decimal list-inside space-y-2 text-sm">
                 <li>BMKTCN (2007). <a href="http://bmktcn.com/index.php?option=com_content&task=view&id=418&Itemid=241" target="_blank" class="text-blue-600 hover:underline">Cải thiện cảnh quan và chất lượng môi trường Khu phố cổ Hà Nội</a> (Improving the Landscape and Environmental Quality of Hanoi Old Quarter).</li>
@@ -268,6 +287,14 @@
         <p>&copy; 2025 Urban Environmental Research. Data compiled from research articles.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          duration: 700, // Thời gian hiệu ứng (ms)
+          once: true,     // Chỉ chạy hiệu ứng 1 lần
+          offset: 50      // Chạy hiệu ứng khi cuộn qua 50px
+      });
+    </script>
+
 </body>
 </html>
-
