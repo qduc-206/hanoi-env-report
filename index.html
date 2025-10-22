@@ -8,15 +8,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
-        /* === THÊM DÒNG NÀY ĐỂ CUỘN MƯỢT === */
         html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Blue Gray 50 */
-            color: #1e293b; /* Blue Gray 800 */
+            background-color: #f8fafc;
+            color: #1e293b;
             margin: 0;
             padding: 0;
             width: 100%;
@@ -32,7 +31,7 @@
             padding-left: 20px;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #065f46; /* Green 800 */
+            color: #065f46;
             margin-bottom: 1rem;
         }
         .section-title::before {
@@ -43,12 +42,12 @@
             transform: translateY(-50%);
             width: 8px;
             height: 8px;
-            background-color: #059669; /* Green 600 */
+            background-color: #059669;
             border-radius: 50%;
         }
         .time-box {
             background-color: #ffffff;
-            border-left: 4px solid #34d399; /* Emerald 400 */
+            border-left: 4px solid #34d399;
             border-radius: 0.5rem;
             padding: 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
@@ -60,7 +59,7 @@
             border-bottom: 1px solid #e2e8f0;
         }
         .custom-table th {
-            background-color: #e5e7eb; /* Gray 200 */
+            background-color: #e5e7eb;
             font-weight: 600;
             color: #1f2937;
         }
@@ -69,24 +68,6 @@
              height: 96px; 
              object-fit: cover;
              border-radius: 0.375rem;
-        }
-        
-        /* === CSS CHO BỐ CỤC ẢNH PHẦN 5 === */
-        .image-float-left {
-            float: left;
-            width: 40%; 
-            max-width: 250px; 
-            height: auto; 
-            margin-right: 1rem; 
-            margin-bottom: 0.5rem; 
-            border-radius: 0.5rem; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-            object-fit: cover; 
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
         }
     </style>
 </head>
@@ -116,6 +97,7 @@
                 <li><a href="#references" class="text-base text-blue-700 hover:text-blue-900 hover:underline">References</a></li>
             </ul>
         </section>
+
         <section id="introduction" class="mb-10">
             <h3 class="section-title">1. Introduction</h3>
             <div class="text-base leading-relaxed p-4 bg-white rounded-lg shadow-md border-t-4 border-teal-500">
@@ -182,79 +164,4 @@
                         <img src="https://dims.apnews.com/dims4/default/b5b872a/2147483647/strip/true/crop/5000x3333+0+0/resize/1440x960!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F73%2Fdb%2F6dd8713b87ecb125cfc62e0a8f71%2F7ba0f5ad722647d09f5082c42c06877a" alt="Severe traffic congestion in Hanoi" class="image-placeholder">
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center mb-4 border-b pb-4">
-                    <p class="mt-0 md:col-span-2">Noise pollution from honking and vendors shouting.</p>
-                    <div class="md:col-span-1 w-full h-24 overflow-hidden rounded-md shadow-md">
-                        <img src="https://vnn-imgs-f.vgcloud.vn/2021/08/03/23/chuyen-gia-na-uy-tim-giai-phap-cho-giao-thong-ha-noi-1.jpg?width=0&s=sfERL_m4K4nJFKBkmEcYrA" alt="Noise pollution from traffic" class="image-placeholder">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center mb-4 border-b pb-4">
-                    <p class="mt-0 md:col-span-2">Flooding after rain due to poor drainage system.</p>
-                    <div class="md:col-span-1 w-full h-24 overflow-hidden rounded-md shadow-md">
-                        <img src="https://cdn.nhandan.vn/images/ec640da5081d570f74d02c7ce033bc77b81583b2b0d5fec333c83a8350d97375d86caed868158a5388537189ed18761686f731c307e5eb53697b748a1ad3a4298e377283140455cd02cc4289d8d4ad5dd8a3cf577bc59d0765fdc711a7cf64c9/ndo_br_z6945569863663-56a755ced55443f37750747649e2561c.jpg" alt="Street flooding in Hanoi" class="image-placeholder">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center mb-4 border-b pb-4">
-                    <p class="mt-0 md:col-span-2">Plastic waste and litter on the streets.</p>
-                    <div class="md:col-span-1 w-full h-24 overflow-hidden rounded-md shadow-md">
-                        <img src="https://cafefcdn.com/2020/7/16/photo-1-15948856763781547803466.png" alt="Waste and litter on street" class="image-placeholder">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
-                    <p class="mt-0 md:col-span-2">Narrow and crowded streets; unsafe for pedestrians.</p>
-                    <div class="md:col-span-1 w-full h-24 overflow-hidden rounded-md shadow-md">
-                        <img src="https://media.istockphoto.com/id/1423336379/vi/anh/nh%E1%BB%AFng-ng%C6%B0%E1%BB%9Di-%C4%91%C3%A0n-%C3%B4ng-vi%E1%BB%87t-nam-t%E1%BB%A5-t%E1%BA%ADp-tr%C3%AAn-ph%E1%BB%91-t%C3%A0u-h%E1%BB%8Fa-%E1%BB%9F-h%C3%A0-n%E1%BB%99i-vi%E1%BB%87t-nam.jpg?s=612x612&w=0&k=20&c=t32u4uyaHDq1GCSURF37ZhxC--YX7FXhxGdoUtQ0tRg=" alt="Narrow and crowded street" class="image-placeholder">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="conclusion" class="mb-10">
-            <h3 class="section-title">5. Conclusion,Recommendations And Discussion</h3>
-            
-            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2">5.1. Discussion</h4>
-            
-            <div class="flex flex-col md:flex-row gap-6 items-start bg-white p-4 rounded-lg shadow-md mb-6">
-                <div class="w-full md:w-2/5">
-                    <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3efd9e6b3c6f48f6ffcf9e7d3e9837338b40419a6c91783b8bf6205bbd6c1655faf63a899dc0d598a8828a44264337440e8/2-953.jpg" 
-                         alt="Hanoi Old Quarter preservation" 
-                         class="w-full h-auto rounded-lg shadow-md">
-                </div>
-                <div class="w-full md:w-3/5">
-                    <p class="text-base leading-relaxed">
-                    The findings reveal that environmental degradation in Hanoi's Old Quater stems from multiple connected factors. Heavy motorbike use causes air, noise, and traffic pollution, while weak waste management leads to garbage buildup that harms the city's image and tourism appeal. Poor enforcement of urban laws and low environmetal awereness among locals an visitors further worseen the situation. Compared with cities like Kyoto or Hoi An, Hanoi lacks strong policies and education programs for a cleaner tourism environment. Thus closer cooperation among authorities, businesses , and the community is vital to improve infrastructure, reduce pollution, and preserve the Old Quater sustainably.
-                </p>
-            </div>
-
-            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2">5.2. Conclusion</h4>
-            <p class="text-base leading-relaxed mb-6">The literature review demonstrates that environmental issues in the Hanoi Old Quarter are a complex system, evolving from landscape degradation to crises in sanitation, waste, and air pollution, all stemming from the root causes of <strong>population overload</strong> and <strong>overburdened technical infrastructure</strong>. A density far exceeding planning limits has paralyzed the effective implementation of waste management solutions and quality of life improvements.</p>
-
-            <h4 class="font-semibold text-lg mb-3 mt-6 text-gray-700 border-b pb-2">5.3. Recommendations</h4>
-            <ul class="list-disc list-inside space-y-3 pl-4 bg-green-50 p-4 rounded-lg shadow-md">
-                <li><strong>Prioritized Population Relocation (Addressing the Root Cause):</strong> Population reduction must be treated as the most urgent environmental solution. Implement attractive financial support policies and build high-quality resettlement areas to reduce density to the planned level (500 people/ha).</li>
-                <li><strong>Environmental Solutions Adapted to Cramped Spaces:</strong> For areas where relocation is not feasible, develop smart, high-frequency waste collection and classification models tailored to the cramped tube-house architecture.</li>
-                <li><strong>Promote Low Emission Zones (LEZ) with Green Public Transport:</strong> Formally adopt the LEZ (as proposed in 2024) while concurrently strengthening the system of electric/green buses and public bicycles to provide viable alternatives to polluting private vehicles.</li>
-            </ul>
-        </section>
-
-        <section id="references" class="mb-10">
-            <h3 class="section-title text-xl border-b pb-2">REFERENCES</h3>
-            <ol class="list-decimal list-inside space-y-2 text-sm">
-                <li>BMKTCN (2007). <a href="http://bmktcn.com/index.php?option=com_content&task=view&id=418&Itemid=241" target="_blank" class="text-blue-600 hover:underline">Cải thiện cảnh quan và chất lượng môi trường Khu phố cổ Hà Nội</a> (Improving the Landscape and Environmental Quality of Hanoi Old Quarter).</li>
-                <li>MDPI (2019). <a href="https://www.mdpi.com/2071-1050/11/6/1768" target="_blank" class="text-blue-600 hover:underline">The Environmental Effects of Urban Development in Hanoi, Vietnam from Satellite and Meteorological Observations from 1999–2016</a>.</li>
-                <li>Môi trường & Cuộc sống (Oct 2020). <a href="https://moitruong.net.vn/sau-dem-trung-thu-pho-co-ha-noi-ngap-trong-rac-thai-11896.html" target="_blank" class="text-blue-600 hover:underline">Sau đêm Trung thu phố cổ Hà Nội ngập trong rác thải</a> (Hanoi Old Quarter Submerged in Waste After Mid-Autumn Festival Night).</li>
-                <li>Kinh Tế Đô Thị (Sept 2023). <a href="https://kinhtedothi.vn/quan-hoan-kiem-chung-tay-vi-mot-ha-noi-xanh.html" target="_blank" class="text-blue-600 hover:underline">Quận Hoàn Kiếm chung tay vì một Hà Nội xanh</a> (Hoan Kiem District Joins Hands for a Green Hanoi).</li>
-                <li>VOV Giao thông & Dân Việt (Nov 2024). <a href="https://vovgiaothong.vn/newsaudio/ha-noi-dan-pho-co-loay-hoay-phan-loai-rac-d41658.html" target="_blank" class="text-blue-600 hover:underline">Hà Nội: Dân phố cổ loay hoay phân loại rác</a> (Hanoi: Old Quarter Residents Confused by Waste Sorting, also covers LEZ).</li>
-                <li>ResearchGate / Longvietarch (2025). <a href="https://longvietarch.wordpress.com/2023/12/13/pho-co-ha-noi-truoc-thach-thuc-bao-ton/" target="_blank" class="text-blue-600 hover:underline">Phố cổ Hà Nội trước thách thức bảo tồn</a> (Hanoi Old Quarter Facing Conservation Challenges).</li>
-            </ol>
-        </section>
-
-    </main>
-
-    <footer class="bg-teal-700 text-white p-4 text-center text-sm mt-10">
-        <p>&copy; 2025 Urban Environmental Research. Data compiled from research articles.</p>
-    </footer>
-
-</body>
-</html>
-
+                <div class="grid
